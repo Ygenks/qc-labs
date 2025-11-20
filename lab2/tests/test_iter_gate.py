@@ -36,7 +36,7 @@ def test_iter_gate_n2(init_a, init_b):
         if init_b[i] == 1:
             qc.x(qreg_b[i])
 
-    iter_gate = IterGate(n)
+    iter_gate = IterGate(0, n, n, n, 2 * n)
     qc.append(iter_gate, qc.qubits)
 
     qc.measure(qreg_a, clreg_res)
